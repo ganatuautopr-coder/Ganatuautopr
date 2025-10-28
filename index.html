@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GanatuautoPR LLC — Rifas de Autos</title>
+  <meta name="description" content="Rifas legales y transparentes de autos en Puerto Rico — GanatuautoPR LLC" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="/assets/logo.png" alt="GanatuautoPR logo" id="site-logo" />
+        <div class="title">
+          <h1>GanatuautoPR LLC</h1>
+          <p class="subtitle">Rifas legales de automóviles — Puerto Rico 🇵🇷</p>
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Menú principal">
+        <a href="#comprar">Comprar boletos</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#terminos">Términos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h2 id="hero-title">Participa en la rifa y gana un automóvil</h2>
+          <p id="hero-sub">Boletos a <strong id="ticket-price-text">$25</strong> cada uno — Venta hasta agotar inventario.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#comprar">Comprar boletos</a>
+            <a class="btn ghost" href="#como-funciona">Cómo funciona</a>
+          </div>
+          <div class="meta">
+            <span id="tickets-remaining">Boletos disponibles: <strong id="remaining-count">500</strong></span>
+            <span id="draw-date">Sorteo: <strong id="draw-date-text">Diciembre 15, 2025</strong></span>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="/assets/car-hero.jpg" alt="Auto en sorteo" />
+        </div>
+      </div>
+    </section>
+
+    <section id="comprar" class="container buy-section">
+      <h3>Comprar boletos</h3>
+
+      <div class="buy-grid">
+        <div class="purchase-card">
+          <label for="buyer-name">Nombre completo</label>
+          <input id="buyer-name" type="text" placeholder="Ej. José Pérez" required />
+
+          <label for="buyer-email">Correo electrónico</label>
+          <input id="buyer-email" type="email" placeholder="ejemplo@correo.com" required />
+
+          <label for="ticket-qty">Cantidad de boletos</label>
+          <div class="qty-row">
+            <button id="qty-decrease" type="button" aria-label="disminuir">−</button>
+            <input id="ticket-qty" type="number" min="1" value="1" />
+            <button id="qty-increase" type="button" aria-label="aumentar">+</button>
+          </div>
+
+          <div class="totals">
+            <p>Precio por boleto: <strong id="ticket-price-display">$25</strong></p>
+            <p>Total: <strong id="total-price">$25</strong></p>
+          </div>
+
+          <div class="payment-actions">
+            <button class="btn primary" id="checkout-btn">Pagar con tarjeta</button>
+            <button class="btn ghost" id="manual-pay-btn">Pagar manualmente (Transferencia)</button>
+          </div>
+
+          <p class="note">Al completar el pago recibirá un correo con su(s) número(s) de boleto y confirmación. Guarda el comprobante.</p>
+        </div>
+
+        <aside class="info-card">
+          <h4>Detalles del sorteo</h4>
+          <ul>
+            <li id="prize-line">Premio: Automóvil (ver foto)</li>
+            <li>Boletos limitados: <span id="limit-display">500</span></li>
+            <li>Selección de ganador(es): <strong id="winners-count-display">1</strong> ganador al azar</li>
+            <li>Reglas disponibles en la sección Términos</li>
+          </ul>
+
+          <div class="soldout" id="soldout-banner" aria-hidden="true">
+            <strong>VENDIDO</strong>
+            <p>Boletos agotados — Sorteo pendiente.</p>
+          </div>
+
+          <div class="admin-cta">
+            <button class="btn small" id="open-admin">Admin: Seleccionar ganadores</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="container">
+      <h3>Cómo funciona</h3>
+      <ol>
+        <li>Compra tus boletos online. Recibirás un correo con tus números de boleto.</li>
+        <li>Los boletos son limitados. Una vez vendidos, se cerrará la venta.</li>
+        <li>El día del sorteo se elegirá aleatoriamente el(los) ganador(es) públicamente y se publicará en esta página y por correo.</li>
+      </ol>
+    </section>
+
+    <section id="terminos" class="container">
+      <h3>Términos y condiciones</h3>
+      <p>GanatuautoPR LLC es responsable de la organización del sorteo. Este sorteo se realiza en Puerto Rico. Aceptas los términos al comprar boletos.</p>
+      <h4>Requisitos</h4>
+      <ul>
+        <li>Debes ser mayor de 18 años.</li>
+        <li>El boleto no es reembolsable.</li>
+        <li>El ganador es elegido al azar y la decisión es final.</li>
+      </ul>
+
+      <h4>Contacto del organizador</h4>
+      <p>GanatuautoPR LLC — correo: <a href="mailto:info@ganatuautopr.com">info@ganatuautopr.com</a></p>
+    </section>
+
+    <section id="contacto" class="container contact">
+      <h3>Contacto</h3>
+      <p>¿Dudas? Escríbenos:</p>
+      <form id="contact-form">
+        <input id="contact-name" type="text" placeholder="Nombre" required />
+        <input id="contact-email" type="email" placeholder="Correo" required />
+        <textarea id="contact-message" placeholder="Tu mensaje" rows="4" required></textarea>
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="copy-year"></span> GanatuautoPR LLC — Rifas en Puerto Rico. EIN: <em id="ein-placeholder">(agrega EIN aquí)</em></p>
+    </div>
+  </footer>
+
+  <!-- Admin modal -->
+  <div id="admin-modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <button class="modal-close" id="admin-close">✕</button>
+      <h3>Admin: seleccionar ganadores</h3>
+      <p>Introduce contraseña de administrador para continuar.</p>
+      <input id="admin-password" type="password" placeholder="Contraseña admin" />
+      <label for="winners-count-input">Número de ganadores</label>
+      <input id="winners-count-input" type="number" min="1" value="1" />
+      <button class="btn primary" id="select-winners-btn">Seleccionar ganadores</button>
+
+      <div id="winners-result" class="winners-result" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
